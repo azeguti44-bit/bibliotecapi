@@ -18,11 +18,34 @@ Este projeto é uma API desenvolvida com **Django Rest Framework** para controle
 
   🔌 Endpoints PrincipaisMétodoEndpointDescrição
   - POST  /api/registrar/              - nome, email e senha (8 digitos)
+    
+  - {
+    "nome": "Seu Nome",
+    "email": "usuario@email.com",
+    "senha": "senha123" 
+}
   - POST  /api/login/                  -  email e senha (8 digitos)
+    {
+    "email": "usuario@email.com",
+    "senha": "senha123"
+    }
   - GET   /api/livros/historico/       - Retorna o histórico separado por status
   - GET  /api/livros/                  - Lista todos os seus livros
+  {
+    "titulo": "Dom Casmurro",
+    "autor": "Machado de Assis",
+    "genero": "Clássico"
+  }
   - POST  /api/emprestimos/            - Registra um novo empréstimo
-  - POST  /api/livros/{id}/devolvido/  - Registra a devolução e avaliação
+   {
+    "livro": 3,
+    "nome_destinatario": "Kelly",
+    "email_destinatario": "kelly@email.com"
+    }
+  - POST  /api/livros/{id}/devolucao/  - Registra a devolução e avaliação
+    {
+    "avaliacao": "O"
+    }
   
  
 - 🔑 Como utilizar o Token de Autenticação
